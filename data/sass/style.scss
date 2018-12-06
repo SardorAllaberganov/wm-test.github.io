@@ -1,0 +1,98 @@
+$full: 100%;
+$color: red;
+@import url('https://fonts.googleapis.com/css?family=Lato');
+html, body, div, * { box-sizing: border-box;}
+body, html, div, canvas {
+	width: $full;
+	height: $full;
+	margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+#wrap {
+	overflow: hidden;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 1%;
+  position: relative;
+  // Canvas
+  canvas{
+    width: 100% !important;
+    height: 100% !important;
+    background: radial-gradient(#FDFDFD, #EEEEEE);
+  }
+  #navbar{
+    width: 95%;
+    z-index: 999;
+		transform: translate(-50%,-50%);
+  	position: fixed;
+  	top: 5%;
+  	left: 50%;
+    height: 20px;
+    a{
+      color: #BE1622;
+    }
+    .nav-link{
+      &:hover .hamm:nth-child(2){
+        width: 25px;
+      }
+      .hamm{
+        display: block;
+        width: 25px;
+        border: 1px solid red;
+        border-width: 1px;
+        margin: 4px;
+      }
+      .hamm:nth-child(2){
+        width: 20px;
+        transition: 0.5s all;
+      }
+    }
+  }
+}
+#centerNav{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  z-index: 99;
+  .navbar{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    a{
+      color: #000;
+      font-size: 5em;
+      font-weight: bold;
+      transition: all .5s;
+      &:hover{
+        color: #BE1622;
+      }
+    }
+  }
+}
+.leftSideMessage{
+  position: absolute;
+  z-index: 999;
+  color: #757575;
+  text-transform: capitalize;
+  bottom: 210px;
+  letter-spacing: 0.5px;
+  left: -150px;
+  transform: rotate(-90deg);
+}
+.rightSideMessage{
+  position: absolute;
+  right: 0;
+  z-index: 9999;
+  bottom: 80px;
+  letter-spacing: 0.5px;
+  color: #757575;
+  text-transform: capitalize;
+  transform: rotate(-90deg);
+}
